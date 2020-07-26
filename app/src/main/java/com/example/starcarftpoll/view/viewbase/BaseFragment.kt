@@ -24,5 +24,5 @@ abstract class BaseFragment<VDB: ViewDataBinding>(@LayoutRes private val layoutI
         root
     }
 
-    protected abstract fun setOnCreateView()
+    protected abstract fun VDB.setOnCreateView()
 }

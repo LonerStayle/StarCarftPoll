@@ -7,36 +7,36 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
 import com.example.starcarftpoll.R
+import com.example.starcarftpoll.databinding.FragmentSplashBinding
 import com.example.starcarftpoll.view.animation.SplashFragmentAnimation
+import com.example.starcarftpoll.view.viewbase.BaseFragment
 import kotlinx.android.synthetic.main.fragment_splash.view.*
 
 
-open class SplashFragment : Fragment() {
+open class SplashFragment : BaseFragment<FragmentSplashBinding>(R.layout.fragment_splash) {
     val dp by lazy { resources.displayMetrics.density }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+
+
+    override fun FragmentSplashBinding.setOnCreateView() {
+
         val splashanimation =
             SplashFragmentAnimation()
         var clickCount = 0
-        val root = inflater.inflate(R.layout.fragment_splash, container, false)
+
         val moonAnimation = AnimationUtils.loadAnimation(context,
             R.anim.splash_textview_moon
         )
 
-        root.textView_MoonClick.startAnimation(moonAnimation)
+       textViewMoonClick.startAnimation(moonAnimation)
 
-        root.imageButton_moon.setOnClickListener {
+        imageButtonMoon.setOnClickListener {
             clickCount++
             if (clickCount == 1) {
                 splashanimation.splashAnimation(root,dp)
             }
         }
-        return root
-
     }
+
 
 }

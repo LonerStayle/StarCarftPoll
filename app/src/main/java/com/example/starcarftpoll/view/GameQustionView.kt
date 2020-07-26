@@ -4,20 +4,25 @@ import android.graphics.Color
 import android.graphics.Typeface
 import android.view.View
 import android.widget.RadioButton
+import androidx.databinding.ViewDataBinding
 import com.example.starcarftpoll.R
+import com.example.starcarftpoll.databinding.FragmentGameBinding
 import com.example.starcarftpoll.db.Question
 import kotlinx.android.synthetic.main.fragment_game.view.*
 
-object Game_QustionView {
+object GameQustionView {
 
-    fun setQuestion(question: Question, root: View) {
-        root.textView_current.text = question.current
-        root.textView_paper.text = question.paper
+    fun setQuestion(question: Question, binding: FragmentGameBinding) {
+        binding.apply {
+            textViewCurrent.text = question.current
+            textViewPaper.text = question.paper
 
-        root.radioButton1.text = question.option[0]
-        root.radioButton2.text = question.option[1]
-        root.radioButton3.text = question.option[2]
-        root.radioButton4.text = question.option[3]
+            radioButton1.text = question.option[0]
+            radioButton2.text = question.option[1]
+            radioButton3.text = question.option[2]
+            radioButton4.text = question.option[3]
+        }
+
 
 
     }

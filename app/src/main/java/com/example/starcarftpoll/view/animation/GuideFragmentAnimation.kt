@@ -6,37 +6,52 @@ import android.view.View
 import android.view.animation.Animation
 import com.example.starcarftpoll.R
 import com.example.starcarftpoll.view.fragment.GameFragment
+import com.example.starcarftpoll.view.fragment.GuideFragment
 import kotlinx.android.synthetic.main.fragment_guide.view.*
 
-class GuideFragmentAnimation: GameFragment() {
+class GuideFragmentAnimation : GuideFragment() {
 
 
-    fun guideAnimation_first(root:View,dp:Float) {
-        root.button_GuidetoGame.animate().translationY(150 * dp).setDuration(10L).withStartAction {
-            root.arrow.animate().translationY(150 * dp).setDuration(10L).withEndAction {
-                root.button_GuidetoGame.visibility = View.VISIBLE
-                root.arrow.visibility = View.VISIBLE
-            }.start()
-        }.start()
-    }
+    fun guideAnimation_first(dp: Float) {
 
-    fun guideAnimation_ButtonClickAfter(root: View,backgroundimageAnimation:Animation,startbtnAni:Animation) {
-        root.button_GuidetoGame.animate().translationY(0f).setDuration(10L)
-            .withStartAction {
-                root.arrow.visibility = View.INVISIBLE
-                root.button_GuidetoGame.visibility = View.INVISIBLE
-                root.textView_Guide.visibility = View.VISIBLE
-                root.imageView_background.visibility = View.VISIBLE
-                root.imageView_background.startAnimation(backgroundimageAnimation)
-
-                root.button_GuidetoGame.animate().setStartDelay(1000).withEndAction {
-                    root.button_GuidetoGame.text = "시작 하기"
-                    root.button_GuidetoGame.setTextColor(Color.WHITE)
-                    root.button_GuidetoGame.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 18f)
-                    root.button_GuidetoGame.setBackgroundResource(R.drawable.guide_buttonbackground)
-                    root.button_GuidetoGame.startAnimation(startbtnAni)
+        binding.apply {
+            buttonGuidetoGame.animate().translationY(150 * dp).setDuration(10L).withStartAction {
+                arrow.animate().translationY(150 * dp).setDuration(10L).withEndAction {
+                    buttonGuidetoGame.visibility = View.VISIBLE
+                    arrow.visibility = View.VISIBLE
                 }.start()
             }.start()
+        }
+
+    }
+
+    fun guideAnimation_ButtonClickAfter(
+        backgroundimageAnimation: Animation,
+        startbtnAni: Animation
+    ) {
+
+        binding.apply {
+            buttonGuidetoGame.animate().translationY(0f).setDuration(10L)
+                .withStartAction {
+                    arrow.visibility = View.INVISIBLE
+                    buttonGuidetoGame.visibility = View.INVISIBLE
+                    textViewGuide.visibility = View.VISIBLE
+                    imageViewBackground.visibility = View.VISIBLE
+                    imageViewBackground.startAnimation(backgroundimageAnimation)
+
+                    buttonGuidetoGame.animate().setStartDelay(1000).withEndAction {
+                        buttonGuidetoGame.apply {
+                            text = "시작 하기"
+                            setTextColor(Color.WHITE)
+                            setTextSize(TypedValue.COMPLEX_UNIT_DIP, 18f)
+                            setBackgroundResource(R.drawable.guide_buttonbackground)
+                            startAnimation(startbtnAni)
+                        }
+
+                    }.start()
+                }.start()
+        }
+
 
     }
 }

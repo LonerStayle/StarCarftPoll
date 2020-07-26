@@ -1,12 +1,6 @@
 package com.example.starcarftpoll.view.fragment
 
 import android.graphics.Color
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.fragment_game.view.*
 import android.graphics.Typeface
 import android.os.Handler
 import android.view.animation.AnimationUtils
@@ -14,16 +8,16 @@ import android.widget.RadioButton
 import android.widget.Toast
 import androidx.activity.addCallback
 import com.example.starcarftpoll.R
+import com.example.starcarftpoll.databinding.FragmentGameBinding
 import com.example.starcarftpoll.db.Question
-import com.example.starcarftpoll.view.Game_QustionView
+import com.example.starcarftpoll.view.GameQustionView
 import com.example.starcarftpoll.view.navi.GoToAction
 import com.example.starcarftpoll.view.animation.GameFragmentAnimation
-import kotlinx.android.synthetic.main.fragment_game.*
+import com.example.starcarftpoll.view.viewbase.BaseFragment
 
 val goToAction = GoToAction()
 
-
-open class GameFragment : Fragment() {
+open class GameFragment : BaseFragment<FragmentGameBinding>(R.layout.fragment_game) {
     val current by lazy { resources.getStringArray(R.array.currentQustion) }
     val currentPaper by lazy { resources.getStringArray(R.array.currentPaper) }
     val option1 by lazy { resources.getStringArray(R.array.option1) }
@@ -47,18 +41,16 @@ open class GameFragment : Fragment() {
     ) }
     val dp by lazy { resources.displayMetrics.density }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val root = inflater.inflate(R.layout.fragment_game, container, false)
 
+
+
+
+    override fun FragmentGameBinding.setOnCreateView() {
         val gameAnimation =
             GameFragmentAnimation()
 
         // 애니메이션 시작
-        gameAnimation.gameAnimation(root, imageAnimation, currentPaperAnimation, dp)
+        gameAnimation.gameAnimation( imageAnimation, currentPaperAnimation, dp)
 
         //문제번호, 문제 설명, 답안 선택지, 문제의 답 모두 넣기
         questions = List<Question>(3) { index ->
@@ -82,14 +74,14 @@ open class GameFragment : Fragment() {
         // 현재 문제 번호를 넣을 값
         val question = questions!![currentQuestion]
         // View
-        Game_QustionView.setQuestion(question, root)
+        GameQustionView.setQuestion(question,this)
 
 
-        root.radio.setOnCheckedChangeListener { group, checkedId ->
+        radio.setOnCheckedChangeListener { group, checkedId ->
 
             if (currentQuestion < questionNumber) {
-                root.imageView_GameBackground.setImageResource(
-                    Game_QustionView.imageChange(
+                imageViewGameBackground.setImageResource(
+                    GameQustionView.imageChange(
                         currentQuestion
                     )
                 )
@@ -98,7 +90,7 @@ open class GameFragment : Fragment() {
                 when (checkedId) {
 
                     R.id.radioButton1 -> {
-                        Game_QustionView.textColerChange(radioButton1, radioSelectColor)
+                        GameQustionView.textColerChange(radioButton1, radioSelectColor)
                         if (questionAnswer == 1) {
                             gamescore++
                         } else if (currentQuestion ==-1) {
@@ -106,7 +98,7 @@ open class GameFragment : Fragment() {
                         }
                     }
                     R.id.radioButton2 -> {
-                        Game_QustionView.textColerChange(radioButton2, radioSelectColor)
+                        GameQustionView.textColerChange(radioButton2, radioSelectColor)
                         if (questionAnswer == 2)
                             gamescore++
                         else if (currentQuestion == -1) {
@@ -116,7 +108,7 @@ open class GameFragment : Fragment() {
                     }
                     // 2020-05-14 문제 가능성 발견 아직모름
                     R.id.radioButton3 -> {
-                        Game_QustionView.textColerChange(radioButton3, radioSelectColor)
+                        GameQustionView.textColerChange(radioButton3, radioSelectColor)
                         if (questionAnswer == 3) {
                             gamescore++
                             if (currentQuestion == 2) {
@@ -129,7 +121,7 @@ open class GameFragment : Fragment() {
                         }
                     }
                     R.id.radioButton4 -> {
-                        Game_QustionView.textColerChange(radioButton4, radioSelectColor)
+                        GameQustionView.textColerChange(radioButton4, radioSelectColor)
                         if (questionAnswer == 4)
                             gamescore++ else if (currentQuestion == -1) {
                             gamescore--
@@ -145,12 +137,13 @@ open class GameFragment : Fragment() {
                     // 아주 잠깐의 선택 답 폰트, 색 변화
                     Handler().postDelayed({
                         for (i in 1..4) {
+
                             root.findViewById<RadioButton>(checkedId).run {
                                 setTextColor(Color.parseColor(white))
                                 setTypeface(null, Typeface.BOLD)
                             }
                         }
-                        Game_QustionView.setQuestion(nextQuestion, root)
+                        GameQustionView.setQuestion(nextQuestion,this )
                     }, 300)
                     group.clearCheck()
 
@@ -162,19 +155,18 @@ open class GameFragment : Fragment() {
                         }, 300)
                     }
                 } else {
-                    goToAction.gotoResult(root, gamescore)
+                    goToAction.gotoResult(root,gamescore)
                 }
 
 
-             // 네비게이션 백 프레스 버튼 뒤로가기 설정
-                requireActivity().onBackPressedDispatcher.addCallback(this) {
+                // 네비게이션 백 프레스 버튼 뒤로가기 설정
+                requireActivity().onBackPressedDispatcher.addCallback(this@GameFragment) {
                     val prevQuestion = questions!![--currentQuestion]
-                    Game_QustionView.setQuestion(prevQuestion, root)
+                    GameQustionView.setQuestion(prevQuestion,binding )
                 }
             }
 
         }
-        return root
     }
 
 }

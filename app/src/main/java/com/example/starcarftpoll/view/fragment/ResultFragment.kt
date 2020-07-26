@@ -10,19 +10,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.starcarftpoll.R
+import com.example.starcarftpoll.databinding.FragmentResultBinding
+import com.example.starcarftpoll.view.viewbase.BaseFragment
 import com.facebook.share.model.ShareLinkContent
 import com.facebook.share.widget.ShareDialog
 import kotlinx.android.synthetic.main.fragment_result.view.*
 
-open class ResultFragment : Fragment() {
+open class ResultFragment : BaseFragment<FragmentResultBinding>(R.layout.fragment_result) {
 
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val root = inflater.inflate(R.layout.fragment_result, container, false)
+
+    override fun FragmentResultBinding.setOnCreateView() {
         val args =
             ResultFragmentArgs.fromBundle(
                 requireArguments()
@@ -34,7 +32,7 @@ open class ResultFragment : Fragment() {
 
         // 애니메이션
         val resultAnimation = root.imageView_Result.drawable as AnimationDrawable
-            resultAnimation.start()
+        resultAnimation.start()
 
         // 등급 결과
         /**if (!isResumed) ?? 효과가 있는가. 폰트 변화시 튕기는 문제를 isResumed로 해결하긴 함*/
@@ -45,13 +43,13 @@ open class ResultFragment : Fragment() {
 
 
         //페이스북 공유
-        root.imageButton_facebook.setOnClickListener {
-            val shareDialog = ShareDialog(this)
+        imageButtonFacebook.setOnClickListener {
+            val shareDialog = ShareDialog(this@ResultFragment)
             shareDialog.show(content, ShareDialog.Mode.FEED)
         }
 
         //카카오톡 공유
-        root.imageButton_kakaoTalk.setOnClickListener {
+        imageButtonKakaoTalk.setOnClickListener {
             val sharingIntent = Intent(Intent.ACTION_SEND)
             sharingIntent.type = "text/plain" // 고정 text
 
@@ -60,8 +58,6 @@ open class ResultFragment : Fragment() {
 
             startActivity(sharingIntent)
         }
-
-        return root
     }
 
 
@@ -75,6 +71,8 @@ open class ResultFragment : Fragment() {
         in 0..9 -> R.drawable.result_e
         else -> 0
     }
+
+
 }
 
 

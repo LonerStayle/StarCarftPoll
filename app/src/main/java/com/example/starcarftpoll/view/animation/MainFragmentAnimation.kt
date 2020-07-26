@@ -7,19 +7,23 @@ import com.example.starcarftpoll.view.fragment.MainFragment
 import kotlinx.android.synthetic.main.fragment_main.view.*
 
 class MainFragmentAnimation: MainFragment() {
-    fun mainAnimation(root:View,starCraftLogo:Animation,centerLogo:Animation,btnStart:Animation,btnGuide:Animation) {
-        root.imageView_StarCarftLogo.visibility = View.VISIBLE
-        root.imageView_StarCarftLogo.startAnimation(starCraftLogo)
+    fun mainAnimation(starCraftLogo:Animation,centerLogo:Animation,btnStart:Animation,btnGuide:Animation) {
+      binding.apply {
 
-        root.imageView_CenterSmoke.visibility = View.VISIBLE
-        root.imageView_CenterSmoke.startAnimation(centerLogo)
+          imageViewStarCarftLogo.visibility = View.VISIBLE
+          imageViewStarCarftLogo.startAnimation(starCraftLogo)
 
-        Handler().postDelayed({
-            root.button_Start.visibility = View.VISIBLE
-            root.button_Guide.visibility = View.VISIBLE
-            root.button_Start.startAnimation(btnStart)
-            root.button_Guide.startAnimation(btnGuide)
-        },500)
+          imageViewCenterSmoke.visibility = View.VISIBLE
+          imageViewCenterSmoke.startAnimation(centerLogo)
+
+          Handler().postDelayed({
+              buttonStart.visibility = View.VISIBLE
+              buttonGuide.visibility = View.VISIBLE
+              buttonStart.startAnimation(btnStart)
+              buttonGuide.startAnimation(btnGuide)
+          },500)
+      }
+
     }
 }
 

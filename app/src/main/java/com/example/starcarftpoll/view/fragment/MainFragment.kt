@@ -7,10 +7,12 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
 import com.example.starcarftpoll.R
+import com.example.starcarftpoll.databinding.FragmentMainBinding
 import com.example.starcarftpoll.view.animation.MainFragmentAnimation
+import com.example.starcarftpoll.view.viewbase.BaseFragment
 import kotlinx.android.synthetic.main.fragment_main.view.*
 
-open class MainFragment : Fragment() {
+open class MainFragment :BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
 
     val starCraftLogo by lazy { AnimationUtils.loadAnimation(context,
         R.anim.main_starcraftlogo
@@ -25,28 +27,23 @@ open class MainFragment : Fragment() {
         R.anim.main_buttonguide
     ) }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
 
-        val root = inflater.inflate(R.layout.fragment_main, container, false)
+
+
+
+    override fun FragmentMainBinding.setOnCreateView() {
         val mainAnimation =
             MainFragmentAnimation()
 
-        mainAnimation.mainAnimation(root,starCraftLogo,centerLogo, btnStart, btnGuide)
+        mainAnimation.mainAnimation(starCraftLogo,centerLogo, btnStart, btnGuide)
 
-        root.button_Start.setOnClickListener {
+        buttonStart.setOnClickListener {
             goToAction.gotoStart(root)
         }
-        root.button_Guide.setOnClickListener {
+        buttonGuide.setOnClickListener {
             goToAction.gotoGuide(root)
         }
-
-        return root
     }
-
 
 
 }
