@@ -1,0 +1,56 @@
+<resources>
+    <string name="kakao_app_key">58b6b19eefd144b1f81a031fd2b8aa0e</string>
+    <string name="kakao_scheme">kakao58b6b19eefd144b1f81a031fd2b8aa0e</string>
+    <string name="kakaolink_host">kakaolink</string>
+    <string name="facebook_app_id">230526778306772</string>
+    <string name="app_name">StarCarftPoll</string>
+<!--    게임 설명-->
+    <string name="guide_info">"20년이 넘은 고인물 게임 \n스타크래프트 \n더 이상 뉴비는 존재하지 않는다.\n당신도 스꼴이라면 당신도 얼마나 이 게임에 고여있는가?\n 측정을 해보자 "</string>
+
+<!--    현재문제-->
+    <string-array name="currentQustion">
+        <item>1번 문제(난이도 쉬움)</item>
+        <item>2번 문제(난이도 쉬움)</item>
+        <item>3번 문제(난이도 쉬움)</item>
+    </string-array>
+
+
+    <string-array name="currentPaper">
+    <item> 전 프로게이머 민찬기는 질럿을 이 별명으로 부르며 프사기를 외치고 있다.\n 이 별명은 무엇인가? </item>
+        <item> 한창 과거(99년~ 2010년)에 수많은 명문 클랜과 초고수들과 프로게이머 지망생들이 많이 모여있었던 서버는?</item>
+        <item>  다음 중 스타크래프트 공방에서 국민맵으로 불리지 않았던 맵은?</item>
+    </string-array>
+
+
+    <string-array name="option1">
+        <item>\t딴딴이\t\t</item>
+        <item>\t유럽 서버\t\t</item>
+        <item>\t로스트템플\t\t</item>
+    </string-array>
+
+    <string-array name="option2">
+        <item>\t딱딱이\t\t</item>
+        <item>\tEAST 서버\t\t</item>
+        <item>\t아카디아\t\t</item>
+    </string-array>
+
+    <string-array name="option3">
+        <item>\t미친놈\t\t</item>
+        <item>\tWEST 서버\t</item>
+        <item>\t파이썬\t</item>
+    </string-array>
+
+
+    <string-array name="option4">
+        <item>\t미니 울트라\t\t</item>
+        <item>\tASIA 서버\t\t</item>
+        <item>\t투혼\t\t</item>
+    </string-array>
+
+
+    <integer-array name="answer">
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+    </integer-array>
+</resources>
