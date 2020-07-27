@@ -6,6 +6,7 @@ import android.view.View
 import android.view.animation.AnimationUtils
 import com.example.starcarftpoll.R
 import com.example.starcarftpoll.databinding.FragmentGuideBinding
+import com.example.starcarftpoll.view.navi.GoToAction
 import com.example.starcarftpoll.view.viewbase.BaseFragment
 
 
@@ -23,7 +24,6 @@ import com.example.starcarftpoll.view.viewbase.BaseFragment
         )
     }
 
-
     private val dp by lazy { resources.displayMetrics.density }
 
 
@@ -37,7 +37,7 @@ import com.example.starcarftpoll.view.viewbase.BaseFragment
             if (clickCount == 1) {
                 guideAnimationButtonClickAfter()
             } else if (clickCount <= 2) {
-                goToAction.gotoGame(root)
+                GoToAction.gotoGame(root)
                 clickCount = 0
             }
         }

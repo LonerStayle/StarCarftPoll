@@ -10,29 +10,33 @@ import com.example.starcarftpoll.view.fragment.GameFragmentDirections
 
 class GoToAction {
 
-    fun gotoResult(view: View, score: Int) {
-      view.findNavController()
-            .navigate(
-                GameFragmentDirections.actionGameFragmentToResultFragment(
-                    result = score
+    companion object{
+        fun gotoResult(view: View, score: Int) {
+            view.findNavController()
+                .navigate(
+                    GameFragmentDirections.actionGameFragmentToResultFragment(
+                        result = score
+                    )
                 )
-            )
+        }
+
+        fun gotoGame(view: View ) {
+            findNavController(view).navigate(R.id.action_guideFragment_to_gameFragment)
+        }
+
+        fun gotoStart(view: View) {
+            findNavController(view).navigate(R.id.action_mainFragment_to_gameFragment)
+        }
+
+        fun gotoGuide(view: View) {
+            findNavController(view).navigate(R.id.action_mainFragment_to_guideFragment)
+        }
+
+        fun gotomain(view: View) {
+            findNavController(view).navigate(R.id.action_splashFragment_to_mainFragment)
+        }
+
     }
 
-    fun gotoGame(view: View ) {
-        findNavController(view).navigate(R.id.action_guideFragment_to_gameFragment)
-    }
-
-    fun gotoStart(view: View) {
-        findNavController(view).navigate(R.id.action_mainFragment_to_gameFragment)
-    }
-
-    fun gotoGuide(view: View) {
-        findNavController(view).navigate(R.id.action_mainFragment_to_guideFragment)
-    }
-
-    fun gotomain(view: View) {
-        findNavController(view).navigate(R.id.action_splashFragment_to_mainFragment)
-    }
 
 }

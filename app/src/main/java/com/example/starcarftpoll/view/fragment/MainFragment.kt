@@ -5,6 +5,7 @@ import android.view.View
 import android.view.animation.AnimationUtils
 import com.example.starcarftpoll.R
 import com.example.starcarftpoll.databinding.FragmentMainBinding
+import com.example.starcarftpoll.view.navi.GoToAction
 import com.example.starcarftpoll.view.viewbase.BaseFragment
 
 class MainFragment :BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
@@ -31,10 +32,12 @@ class MainFragment :BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
       mainAnimation()
 
         buttonStart.setOnClickListener {
-            goToAction.gotoStart(root)
+
+            GoToAction.gotoStart(root)
         }
         buttonGuide.setOnClickListener {
-            goToAction.gotoGuide(root)
+
+            GoToAction.gotoGuide(root)
         }
     }
 

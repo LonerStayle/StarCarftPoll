@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.starcarftpoll.R
 import com.example.starcarftpoll.databinding.FragmentSplashBinding
+import com.example.starcarftpoll.view.navi.GoToAction
 import com.example.starcarftpoll.view.viewbase.BaseFragment
 import kotlinx.android.synthetic.main.fragment_splash.view.*
 
@@ -55,7 +56,7 @@ import kotlinx.android.synthetic.main.fragment_splash.view.*
                     )
                     imageButtonMoon.animate().rotation(360f).setDuration(600L)
                         .withEndAction {
-                            goToAction.gotomain(root)
+                            GoToAction.gotomain(root)
                         }.start()
                 }.start()
         }

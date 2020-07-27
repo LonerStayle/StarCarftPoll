@@ -15,7 +15,7 @@ import com.example.starcarftpoll.view.GameQustionView
 import com.example.starcarftpoll.view.navi.GoToAction
 import com.example.starcarftpoll.view.viewbase.BaseFragment
 
-val goToAction = GoToAction()
+
 
  class GameFragment : BaseFragment<FragmentGameBinding>(R.layout.fragment_game) {
     private val current by lazy { resources.getStringArray(R.array.currentQustion) }
@@ -148,7 +148,7 @@ val goToAction = GoToAction()
                         }, 300)
                     }
                 } else {
-                    goToAction.gotoResult(root,gamescore)
+                    GoToAction.gotoResult(root,gamescore)
                 }
 
 
