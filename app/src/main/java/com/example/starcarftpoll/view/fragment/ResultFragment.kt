@@ -18,28 +18,25 @@ import kotlinx.android.synthetic.main.fragment_result.view.*
 
 open class ResultFragment : BaseFragment<FragmentResultBinding>(R.layout.fragment_result) {
 
-
-
+    private val args by lazy { ResultFragmentArgs.fromBundle(
+        requireArguments()
+    ) }
     override fun FragmentResultBinding.setOnCreateView() {
-        val args =
-            ResultFragmentArgs.fromBundle(
-                requireArguments()
-            )
+
 
         val content = ShareLinkContent.Builder()
             .setContentUrl(Uri.parse("https://www.facebook.com"))
             .build()
 
         // 애니메이션
-        val resultAnimation = root.imageView_Result.drawable as AnimationDrawable
+        val resultAnimation = imageViewResult.drawable as AnimationDrawable
         resultAnimation.start()
 
         // 등급 결과
         /**if (!isResumed) ?? 효과가 있는가. 폰트 변화시 튕기는 문제를 isResumed로 해결하긴 함*/
         Handler().postDelayed({
             root.imageView_Result.setImageResource(resultCalculator(args.result))
-        },3000)
-
+        }, 3000)
 
 
         //페이스북 공유
@@ -62,7 +59,7 @@ open class ResultFragment : BaseFragment<FragmentResultBinding>(R.layout.fragmen
 
 
     //int가 반환형인데 반환형이 없을까봐 else 를 넣음
-    fun resultCalculator(result: Int): Int = when (result) {
+    private fun resultCalculator(result: Int): Int = when (result) {
         in 57..70 -> R.drawable.result_s
         in 45..56 -> R.drawable.result_a
         in 30..44 -> R.drawable.result_b

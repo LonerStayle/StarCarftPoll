@@ -11,7 +11,7 @@ import com.example.starcarftpoll.view.fragment.GameFragmentDirections
 class GoToAction {
 
     fun gotoResult(view: View, score: Int) {
-      findNavController(view)
+      view.findNavController()
             .navigate(
                 GameFragmentDirections.actionGameFragmentToResultFragment(
                     result = score

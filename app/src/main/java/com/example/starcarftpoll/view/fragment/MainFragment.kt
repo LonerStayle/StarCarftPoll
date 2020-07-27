@@ -1,18 +1,13 @@
 package com.example.starcarftpoll.view.fragment
 
-import android.os.Bundle
-import android.view.LayoutInflater
+import android.os.Handler
 import android.view.View
-import android.view.ViewGroup
 import android.view.animation.AnimationUtils
-import androidx.fragment.app.Fragment
 import com.example.starcarftpoll.R
 import com.example.starcarftpoll.databinding.FragmentMainBinding
-import com.example.starcarftpoll.view.animation.MainFragmentAnimation
 import com.example.starcarftpoll.view.viewbase.BaseFragment
-import kotlinx.android.synthetic.main.fragment_main.view.*
 
-open class MainFragment :BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
+class MainFragment :BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
 
     val starCraftLogo by lazy { AnimationUtils.loadAnimation(context,
         R.anim.main_starcraftlogo
@@ -32,10 +27,8 @@ open class MainFragment :BaseFragment<FragmentMainBinding>(R.layout.fragment_mai
 
 
     override fun FragmentMainBinding.setOnCreateView() {
-        val mainAnimation =
-            MainFragmentAnimation()
 
-        mainAnimation.mainAnimation(starCraftLogo,centerLogo, btnStart, btnGuide)
+      mainAnimation()
 
         buttonStart.setOnClickListener {
             goToAction.gotoStart(root)
@@ -45,5 +38,23 @@ open class MainFragment :BaseFragment<FragmentMainBinding>(R.layout.fragment_mai
         }
     }
 
+   private fun mainAnimation() {
+        binding.apply {
+
+            imageViewStarCarftLogo.visibility = View.VISIBLE
+            imageViewStarCarftLogo.startAnimation(starCraftLogo)
+
+            imageViewCenterSmoke.visibility = View.VISIBLE
+            imageViewCenterSmoke.startAnimation(centerLogo)
+
+            Handler().postDelayed({
+                buttonStart.visibility = View.VISIBLE
+                buttonGuide.visibility = View.VISIBLE
+                buttonStart.startAnimation(btnStart)
+                buttonGuide.startAnimation(btnGuide)
+            },500)
+        }
+
+    }
 
 }

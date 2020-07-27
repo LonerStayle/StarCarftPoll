@@ -3,6 +3,7 @@ package com.example.starcarftpoll.view.fragment
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Handler
+import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.RadioButton
 import android.widget.Toast
@@ -12,45 +13,37 @@ import com.example.starcarftpoll.databinding.FragmentGameBinding
 import com.example.starcarftpoll.db.Question
 import com.example.starcarftpoll.view.GameQustionView
 import com.example.starcarftpoll.view.navi.GoToAction
-import com.example.starcarftpoll.view.animation.GameFragmentAnimation
 import com.example.starcarftpoll.view.viewbase.BaseFragment
 
 val goToAction = GoToAction()
 
-open class GameFragment : BaseFragment<FragmentGameBinding>(R.layout.fragment_game) {
-    val current by lazy { resources.getStringArray(R.array.currentQustion) }
-    val currentPaper by lazy { resources.getStringArray(R.array.currentPaper) }
-    val option1 by lazy { resources.getStringArray(R.array.option1) }
-    val option2 by lazy { resources.getStringArray(R.array.option2) }
-    val option3 by lazy { resources.getStringArray(R.array.option3) }
-    val option4 by lazy { resources.getStringArray(R.array.option4) }
-    val answer by lazy { resources.getIntArray(R.array.answer) }
-    val questionNumber by lazy { questions!!.size }
-    //늦은 var 초기화 latelnit var는 사실상 자바사용자를 위한 것
-    var questions: List<Question>? = null
-    var currentQuestion = 0
-    var gamescore = 0
-
-    val radioSelectColor = "#02F6E4"
-    val imageAnimation by lazy { AnimationUtils.loadAnimation(context,
+ class GameFragment : BaseFragment<FragmentGameBinding>(R.layout.fragment_game) {
+    private val current by lazy { resources.getStringArray(R.array.currentQustion) }
+    private val currentPaper by lazy { resources.getStringArray(R.array.currentPaper) }
+    private val option1 by lazy { resources.getStringArray(R.array.option1) }
+    private val option2 by lazy { resources.getStringArray(R.array.option2) }
+    private val option3 by lazy { resources.getStringArray(R.array.option3) }
+    private val option4 by lazy { resources.getStringArray(R.array.option4) }
+    private val answer by lazy { resources.getIntArray(R.array.answer) }
+    private val questionNumber by lazy { questions!!.size }
+   //늦은 var 초기화 latelnit var는 사실상 자바사용자를 위한 것
+    private var questions: List<Question>? = null
+    private var currentQuestion = 0
+    private var gamescore = 0
+    private val radioSelectColor = "#02F6E4"
+    private val imageAnimation by lazy { AnimationUtils.loadAnimation(context,
         R.anim.game_image_animation
     ) }
-    val white by lazy { "#FFFFFF" }
-    val currentPaperAnimation by lazy { AnimationUtils.loadAnimation(context,
+    private val white by lazy { "#FFFFFF" }
+    private val currentPaperAnimation by lazy { AnimationUtils.loadAnimation(context,
         R.anim.game_currntpaper_animation
     ) }
- protected val dp by lazy { resources.displayMetrics.density }
-
-
-
-
+ private val dp by lazy { resources.displayMetrics.density }
 
     override fun FragmentGameBinding.setOnCreateView() {
-        val gameAnimation =
-            GameFragmentAnimation()
 
         // 애니메이션 시작
-        gameAnimation.gameAnimation( imageAnimation, currentPaperAnimation)
+        gameAnimation()
 
         //문제번호, 문제 설명, 답안 선택지, 문제의 답 모두 넣기
         questions = List<Question>(3) { index ->
@@ -168,6 +161,36 @@ open class GameFragment : BaseFragment<FragmentGameBinding>(R.layout.fragment_ga
 
         }
     }
+    private fun gameAnimation() {
+         binding.apply {
+
+             //이미지 애니메이션
+             imageViewGameBackground.startAnimation(imageAnimation)
+
+             //애니메이션 뒤늦게
+             textViewPaper.startAnimation(currentPaperAnimation)
+             textViewPaper.visibility = View.VISIBLE
+
+             //애니메이션 답지
+             for (i in 1..4) {
+                 root.findViewById<RadioButton>(
+                     resources.getIdentifier(
+                         "radioButton$i",
+                         "id",
+                         "com.example.starcarftpoll"
+                     )
+                 ).run {
+                     animate().translationX(300f * dp).setDuration(10L).withEndAction {
+                         animate().setStartDelay(5000L).translationX(0f).setDuration(1000L)
+                             .withStartAction {
+                                 visibility = View.VISIBLE
+                             }.start()
+                     }.start()
+                 }
+             }
+         }
+
+     }
 
 }
 
