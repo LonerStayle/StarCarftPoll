@@ -14,8 +14,8 @@ import kotlinx.android.synthetic.main.fragment_splash.view.*
 
 
 open class SplashFragment : BaseFragment<FragmentSplashBinding>(R.layout.fragment_splash) {
-    val dp by lazy { resources.displayMetrics.density }
 
+protected val dp by lazy{resources.displayMetrics.density}
 
 
     override fun FragmentSplashBinding.setOnCreateView() {
@@ -33,7 +33,7 @@ open class SplashFragment : BaseFragment<FragmentSplashBinding>(R.layout.fragmen
         imageButtonMoon.setOnClickListener {
             clickCount++
             if (clickCount == 1) {
-                splashanimation.splashAnimation(root,dp)
+                splashanimation.splashAnimation()
             }
         }
     }

@@ -39,7 +39,7 @@ open class GameFragment : BaseFragment<FragmentGameBinding>(R.layout.fragment_ga
     val currentPaperAnimation by lazy { AnimationUtils.loadAnimation(context,
         R.anim.game_currntpaper_animation
     ) }
-    val dp by lazy { resources.displayMetrics.density }
+ protected val dp by lazy { resources.displayMetrics.density }
 
 
 
@@ -50,7 +50,7 @@ open class GameFragment : BaseFragment<FragmentGameBinding>(R.layout.fragment_ga
             GameFragmentAnimation()
 
         // 애니메이션 시작
-        gameAnimation.gameAnimation( imageAnimation, currentPaperAnimation, dp)
+        gameAnimation.gameAnimation( imageAnimation, currentPaperAnimation)
 
         //문제번호, 문제 설명, 답안 선택지, 문제의 답 모두 넣기
         questions = List<Question>(3) { index ->

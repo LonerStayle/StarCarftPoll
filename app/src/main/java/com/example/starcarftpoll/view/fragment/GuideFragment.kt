@@ -20,27 +20,28 @@ open class GuideFragment : BaseFragment<FragmentGuideBinding>(R.layout.fragment_
             R.anim.guide_imagebackground
         )
     }
-    val startbtnAni by lazy { AnimationUtils.loadAnimation(context,
-        R.anim.guide_btnstart
-    ) }
+    val startbtnAni by lazy {
+        AnimationUtils.loadAnimation(
+            context,
+            R.anim.guide_btnstart
+        )
+    }
 
 
-        val dp by lazy { resources.displayMetrics.density }
-
-
+    protected val dp by lazy { resources.displayMetrics.density }
 
 
     override fun FragmentGuideBinding.setOnCreateView() {
         val guideAnimation =
             GuideFragmentAnimation()
 
-        guideAnimation.guideAnimation_first(dp)
+        guideAnimation.guideAnimationFirst()
 
         var clickCount = 0
         buttonGuidetoGame.setOnClickListener {
             clickCount++
             if (clickCount == 1) {
-                guideAnimation.guideAnimation_ButtonClickAfter(backgroundimage,startbtnAni)
+                guideAnimation.guideAnimationButtonClickAfter(backgroundimage, startbtnAni)
             } else if (clickCount <= 2) {
                 goToAction.gotoGame(root)
                 clickCount = 0

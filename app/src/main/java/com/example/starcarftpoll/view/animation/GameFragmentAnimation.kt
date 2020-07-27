@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.fragment_game.view.*
 
 class GameFragmentAnimation: GameFragment() {
 
-    fun gameAnimation(imageAnimation:Animation,currentPaperAnimation: Animation,dp:Float) {
+    fun gameAnimation(imageAnimation:Animation,currentPaperAnimation: Animation) {
         binding.apply {
 
             //이미지 애니메이션

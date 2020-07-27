@@ -9,6 +9,7 @@ import com.example.starcarftpoll.R
 import com.example.starcarftpoll.view.fragment.GameFragmentDirections
 
 class GoToAction {
+
     fun gotoResult(view: View, score: Int) {
       findNavController(view)
             .navigate(

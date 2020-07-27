@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.fragment_splash.view.*
 class SplashFragmentAnimation: SplashFragment() {
 
 
-    fun splashAnimation(dp:Float) {
+    fun splashAnimation() {
         binding.apply {
             textViewMoonClick.clearAnimation()
             textViewMoonClick.visibility = View.GONE
