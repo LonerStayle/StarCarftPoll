@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.fragment_guide.view.*
 class GuideFragmentAnimation : GuideFragment() {
 
 
-    fun guideAnimation_first(dp: Float) {
+    fun guideAnimationFirst() {
 
         binding.apply {
             buttonGuidetoGame.animate().translationY(150 * dp).setDuration(10L).withStartAction {
@@ -25,7 +25,7 @@ class GuideFragmentAnimation : GuideFragment() {
 
     }
 
-    fun guideAnimation_ButtonClickAfter(
+    fun guideAnimationButtonClickAfter(
         backgroundimageAnimation: Animation,
         startbtnAni: Animation
     ) {
