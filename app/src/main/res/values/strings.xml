@@ -12,6 +12,15 @@
         <item>1번 문제(난이도 쉬움)</item>
         <item>2번 문제(난이도 쉬움)</item>
         <item>3번 문제(난이도 쉬움)</item>
+        <item>4번 문제(난이도 보통)</item>
+        <item>5번 문제(난이도 보통)</item>
+        <item>6번 문제(난이도 보통)</item>
+        <item>7번 문제(난이도 쉬움)</item>
+        <item>8번 문제(난이도 쉬움)</item>
+        <item>9번 문제(난이도 쉬움)</item>
+        <item>10번 문제(난이도 쉬움)</item>
+        <item>11번 문제(난이도 쉬움)</item>
+        <item>12번 문제(난이도 쉬움)</item>
     </string-array>
 
 
@@ -19,25 +28,67 @@
     <item> 전 프로게이머 민찬기는 질럿을 이 별명으로 부르며 프사기를 외치고 있다.\n 이 별명은 무엇인가? </item>
         <item> 한창 과거(99년~ 2010년)에 수많은 명문 클랜과 초고수들과 프로게이머 지망생들이 많이 모여있었던 서버는?</item>
         <item>  다음 중 스타크래프트 공방에서 국민맵으로 불리지 않았던 맵은?</item>
+        <item>  당신이 1:1 투혼 초보방을 만들었다. 초보를 학살 하러온 가짜 초보들이 대거 접속할 것이다.\n전적을 확인하여 속지않고 초보인지 확인을 해야한다.\n전적을 확인했을 때 가짜 초보일 확률이 가장 높은것은?</item>
+        <item> 이영호가 몸담았던 클랜으로 유명한 by클랜은 과거 많은 게이머 꿈나무들이 가입하고 싶었던 클랜으로 손꼽힌다.\n
+by클랜의 공식 채널명은 무엇인가?</item>
+        <item>   드론의 아버지 이주영은 현재 E스포츠 씬에서 그 모습을 확인 할 수가 없다고 한다.\n 다른 직업군을 가지고 생활하는 그의 현 직업은?</item>
+        <item>  과거 스타크래프트는 일반 배틀넷에서는 반응속도가 좋지않아서\n
+            런처라는 특별프로그램을 사용하기 전에는 게이머지망생들은 랜 연결 혹은 하마치를 통해 따로 연습했다고 한다.\n
+            답답한 유저들을 구제해준 이 런처라는 프로그램 중 가장 최초로 나온 런처는?</item>
+        <item>  다음 중 게임 내에서 레더 1등을 달성하여서 해설위원이 된
+해설위원은 누구인가?</item>
+        <item>  다음 중 스타크래프트 맵중에서 가장 욕을 많이 먹었던 맵은?</item>
+        <item>  최초의 저그 우승자는 누구인가?</item>
+        <item>  치킨을 배달 시키면 게임이 치킨 배달이 오기 전에 끝나는 종족전은?\n
+(5판 3선 기준)</item>
+        <item>  전프로게이머 출신중에 가장 피부가 흑인과 가까운 사람은?</item>
     </string-array>
+
 
 
     <string-array name="option1">
         <item>\t딴딴이\t\t</item>
         <item>\t유럽 서버\t\t</item>
         <item>\t로스트템플\t\t</item>
+        <item>\ 579승 1000패\t\t</item>
+        <item>\op byclan-\t\t</item>
+        <item>\택시 기사\t\t</item>
+        <item>\미니런처 (브레인)\t\t</item>
+        <item>\김태형\t\t</item>
+        <item>\ 루나\t\t</item>
+        <item>\국기봉\t\t</item>
+        <item>\tZ VS Z\t\t</item>
+        <item>\베르트랑\t\t</item>
     </string-array>
 
     <string-array name="option2">
         <item>\t딱딱이\t\t</item>
         <item>\tEAST 서버\t\t</item>
         <item>\t아카디아\t\t</item>
+        <item>\120승 150패\t\t</item>
+        <item>\op clanby\t\t</item>
+        <item>\사무직 회사원\t\t</item>
+        <item>\아쿠아런처\t\t</item>
+        <item>\엄재경\t\t</item>
+        <item>\노스텔지아\t\t</item>
+        <item>\박성준\t\t</item>
+        <item>\P VS Z\t\t</item>
+        <item>\기욤패트리\t\t</item>
     </string-array>
 
     <string-array name="option3">
         <item>\t미친놈\t\t</item>
         <item>\tWEST 서버\t</item>
         <item>\t파이썬\t</item>
+        <item>\2승 27패\t</item>
+        <item>\op byC-\t</item>
+        <item>\펀드매니저\t</item>
+        <item>\카오스런처\t</item>
+        <item>\전형준\t</item>
+        <item>\머큐리\t</item>
+        <item>\마XX\t</item>
+        <item>\tP VS Z\t</item>
+        <item>\이성은\t</item>
     </string-array>
 
 
@@ -45,12 +96,30 @@
         <item>\t미니 울트라\t\t</item>
         <item>\tASIA 서버\t\t</item>
         <item>\t투혼\t\t</item>
+        <item>\0승 3패\t\t</item>
+        <item>\op by\t\t</item>
+        <item>\치과의사\t\t</item>
+        <item>\w런처(원순철)\t\t</item>
+        <item>\정소림\t\t</item>
+        <item>\데스티네이션\t\t</item>
+        <item>\홍진호\t\t</item>
+        <item>\tT VS Z\t\t</item>
+        <item>\몽군\t\t</item>
     </string-array>
 
 
     <integer-array name="answer">
         <item>4</item>
         <item>3</item>
+        <item>2</item>
+        <item>4</item>
+        <item>2</item>
+        <item>4</item>
+        <item>3</item>
+        <item>1</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
         <item>3</item>
     </integer-array>
 </resources>

@@ -60,12 +60,12 @@ open class ResultFragment : BaseFragment<FragmentResultBinding>(R.layout.fragmen
 
     //int가 반환형인데 반환형이 없을까봐 else 를 넣음
     private fun resultCalculator(result: Int): Int = when (result) {
-        in 57..70 -> R.drawable.result_s
-        in 45..56 -> R.drawable.result_a
-        in 30..44 -> R.drawable.result_b
-        in 18..29 -> R.drawable.result_c
-        in 10..17 -> R.drawable.result_d
-        in 0..9 -> R.drawable.result_e
+        in 12..30 -> R.drawable.result_s
+        in 11..12 -> R.drawable.result_a
+        in 8..10 -> R.drawable.result_b
+        in 6..7 -> R.drawable.result_c
+        in 3..5 -> R.drawable.result_d
+        in 0..2 -> R.drawable.result_e
         else -> 0
     }
 

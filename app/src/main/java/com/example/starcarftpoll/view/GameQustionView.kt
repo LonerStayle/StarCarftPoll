@@ -10,7 +10,7 @@ import com.example.starcarftpoll.databinding.FragmentGameBinding
 import com.example.starcarftpoll.db.Question
 import kotlinx.android.synthetic.main.fragment_game.view.*
 
-object GameQustionView {
+object GameQuestionView {
 
     fun setQuestion(question: Question, binding: FragmentGameBinding) {
         binding.apply {
@@ -27,7 +27,7 @@ object GameQustionView {
 
     }
 
-    fun textColerChange(radioButton: RadioButton, radioSelectColor: String) {
+    fun textColorChange(radioButton: RadioButton, radioSelectColor: String) {
         radioButton.setTextColor(Color.parseColor(radioSelectColor))
         radioButton.setTypeface(null, Typeface.BOLD_ITALIC)
     }
@@ -35,13 +35,13 @@ object GameQustionView {
     fun imageChange(currentQustion:Int):Int =
 
         when(currentQustion) {
-            in 0..10 -> R.drawable.game7
-            in 11..20 -> R.drawable.game3
-            in 21..30 -> R.drawable.game2
-            in 31..40 -> R.drawable.game4
-            in 41..50 -> R.drawable.game5
-            in 51..60 -> R.drawable.game8
-            in 61..70 -> R.drawable.game6
+            in 0..1 -> R.drawable.game7
+            in 2..3 -> R.drawable.game3
+            in 4..5 -> R.drawable.game2
+            in 6..7 -> R.drawable.game4
+            in 8..9 -> R.drawable.game5
+            10 -> R.drawable.game8
+            11 -> R.drawable.game6
             else -> 0
         }
     }

@@ -14,6 +14,7 @@
             android:id="@+id/action_mainFragment_to_guideFragment"
             app:destination="@id/guideFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.example.starcarftpoll.view.fragment.GameFragment"
@@ -40,6 +41,7 @@
             android:name="result"
             app:argType="integer" />
     </fragment>
+
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.starcarftpoll.view.fragment.SplashFragment"

@@ -11,7 +11,7 @@ import androidx.activity.addCallback
 import com.example.starcarftpoll.R
 import com.example.starcarftpoll.databinding.FragmentGameBinding
 import com.example.starcarftpoll.db.Question
-import com.example.starcarftpoll.view.GameQustionView
+import com.example.starcarftpoll.view.GameQuestionView
 import com.example.starcarftpoll.view.navi.GoToAction
 import com.example.starcarftpoll.view.viewbase.BaseFragment
 
@@ -46,7 +46,7 @@ import com.example.starcarftpoll.view.viewbase.BaseFragment
         gameAnimation()
 
         //문제번호, 문제 설명, 답안 선택지, 문제의 답 모두 넣기
-        questions = List<Question>(3) { index ->
+        questions = List<Question>(currentPaper.size) { index ->
             Question(
                 "",
                 "",
@@ -67,14 +67,14 @@ import com.example.starcarftpoll.view.viewbase.BaseFragment
         // 현재 문제 번호를 넣을 값
         val question = questions!![currentQuestion]
         // View
-        GameQustionView.setQuestion(question,this)
+        GameQuestionView.setQuestion(question,this)
 
 
         radio.setOnCheckedChangeListener { group, checkedId ->
 
             if (currentQuestion < questionNumber) {
                 imageViewGameBackground.setImageResource(
-                    GameQustionView.imageChange(
+                    GameQuestionView.imageChange(
                         currentQuestion
                     )
                 )
@@ -83,7 +83,7 @@ import com.example.starcarftpoll.view.viewbase.BaseFragment
                 when (checkedId) {
 
                     R.id.radioButton1 -> {
-                        GameQustionView.textColerChange(radioButton1, radioSelectColor)
+                        GameQuestionView.textColorChange(radioButton1, radioSelectColor)
                         if (questionAnswer == 1) {
                             gamescore++
                         } else if (currentQuestion ==-1) {
@@ -91,7 +91,7 @@ import com.example.starcarftpoll.view.viewbase.BaseFragment
                         }
                     }
                     R.id.radioButton2 -> {
-                        GameQustionView.textColerChange(radioButton2, radioSelectColor)
+                        GameQuestionView.textColorChange(radioButton2, radioSelectColor)
                         if (questionAnswer == 2)
                             gamescore++
                         else if (currentQuestion == -1) {
@@ -101,22 +101,21 @@ import com.example.starcarftpoll.view.viewbase.BaseFragment
                     }
                     // 2020-05-14 문제 가능성 발견 아직모름
                     R.id.radioButton3 -> {
-                        GameQustionView.textColerChange(radioButton3, radioSelectColor)
+                        GameQuestionView.textColorChange(radioButton3, radioSelectColor)
                         if (questionAnswer == 3) {
                             gamescore++
                             if (currentQuestion == 2) {
-                                gamescore += 10
+                                gamescore += 3
                             } else if (currentQuestion == -1) {
-                                gamescore -= 10
-                            } else {
-                                gamescore--
+                                gamescore -= 3
                             }
                         }
                     }
                     R.id.radioButton4 -> {
-                        GameQustionView.textColerChange(radioButton4, radioSelectColor)
+                        GameQuestionView.textColorChange(radioButton4, radioSelectColor)
                         if (questionAnswer == 4)
-                            gamescore++ else if (currentQuestion == -1) {
+                            gamescore++
+                        else if (currentQuestion == -1) {
                             gamescore--
                         }
                     }
@@ -136,7 +135,7 @@ import com.example.starcarftpoll.view.viewbase.BaseFragment
                                 setTypeface(null, Typeface.BOLD)
                             }
                         }
-                        GameQustionView.setQuestion(nextQuestion,this )
+                        GameQuestionView.setQuestion(nextQuestion,this )
                     }, 300)
                     group.clearCheck()
 
@@ -155,7 +154,7 @@ import com.example.starcarftpoll.view.viewbase.BaseFragment
                 // 네비게이션 백 프레스 버튼 뒤로가기 설정
                 requireActivity().onBackPressedDispatcher.addCallback(this@GameFragment) {
                     val prevQuestion = questions!![--currentQuestion]
-                    GameQustionView.setQuestion(prevQuestion,binding )
+                    GameQuestionView.setQuestion(prevQuestion,binding )
                 }
             }
 
