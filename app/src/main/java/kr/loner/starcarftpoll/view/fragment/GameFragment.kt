@@ -205,10 +205,8 @@ class GameFragment : BaseFragment<FragmentGameBinding>(R.layout.fragment_game) {
     private fun setAdView(){
         MobileAds.initialize(requireContext(),getString(R.string.admob_app_id))
         AdRequest.Builder().build().also{
-            adView.loadAd(it)
+            binding.adView.loadAd(it)
         }
-
-
     }
 }
 
