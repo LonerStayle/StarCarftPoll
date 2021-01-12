@@ -1,4 +1,4 @@
-package com.example.starcarftpoll.db
+package kr.loner.starcarftpoll.db
 
 data class Question(
     var current: String,

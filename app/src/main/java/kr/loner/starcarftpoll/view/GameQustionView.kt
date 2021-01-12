@@ -1,14 +1,11 @@
-package com.example.starcarftpoll.view
+package kr.loner.starcarftpoll.view
 
 import android.graphics.Color
 import android.graphics.Typeface
-import android.view.View
 import android.widget.RadioButton
-import androidx.databinding.ViewDataBinding
-import com.example.starcarftpoll.R
-import com.example.starcarftpoll.databinding.FragmentGameBinding
-import com.example.starcarftpoll.db.Question
-import kotlinx.android.synthetic.main.fragment_game.view.*
+import kr.loner.starcarftpoll.R
+import kr.loner.starcarftpoll.databinding.FragmentGameBinding
+import kr.loner.starcarftpoll.db.Question
 
 object GameQuestionView {
 
@@ -35,13 +32,13 @@ object GameQuestionView {
     fun imageChange(currentQustion:Int):Int =
 
         when(currentQustion) {
-            in 0..1 -> R.drawable.game7
-            in 2..3 -> R.drawable.game3
-            in 4..5 -> R.drawable.game2
-            in 6..7 -> R.drawable.game4
-            in 8..9 -> R.drawable.game5
-            10 -> R.drawable.game8
-            11 -> R.drawable.game6
+            in 0..5 -> R.drawable.game7
+            in 6..11 -> R.drawable.game3
+            in 12..16 -> R.drawable.game2
+            in 17..22 -> R.drawable.game4
+            in 23..27 -> R.drawable.game5
+            in 28..32 -> R.drawable.game8
+            in 33..36 -> R.drawable.game6
             else -> 0
         }
     }

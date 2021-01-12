@@ -1,16 +1,17 @@
-package com.example.starcarftpoll.view.activity
+package kr.loner.starcarftpoll.view.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import com.example.starcarftpoll.R
-import com.example.starcarftpoll.databinding.ActivityMainBinding
+
+import kr.loner.starcarftpoll.R
+import kr.loner.starcarftpoll.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-      DataBindingUtil.setContentView<ActivityMainBinding>(this,R.layout.activity_main)
+      DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
     }
 

@@ -1,4 +1,4 @@
-package com.example.starcarftpoll.view.viewbase
+package kr.loner.starcarftpoll.view.viewbase
 
 import android.os.Bundle
 import android.view.LayoutInflater

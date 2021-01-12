@@ -1,13 +1,13 @@
-package com.example.starcarftpoll.view.fragment
+package kr.loner.starcarftpoll.view.fragment
 
 import android.graphics.Color
 import android.util.TypedValue
 import android.view.View
 import android.view.animation.AnimationUtils
-import com.example.starcarftpoll.R
-import com.example.starcarftpoll.databinding.FragmentGuideBinding
-import com.example.starcarftpoll.view.navi.GoToAction
-import com.example.starcarftpoll.view.viewbase.BaseFragment
+import kr.loner.starcarftpoll.R
+import kr.loner.starcarftpoll.databinding.FragmentGuideBinding
+import kr.loner.starcarftpoll.view.navi.GoToAction
+import kr.loner.starcarftpoll.view.viewbase.BaseFragment
 
 
  class GuideFragment : BaseFragment<FragmentGuideBinding>(R.layout.fragment_guide) {

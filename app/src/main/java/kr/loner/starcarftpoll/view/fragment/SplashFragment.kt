@@ -1,4 +1,4 @@
-package com.example.starcarftpoll.view.fragment
+package kr.loner.starcarftpoll.view.fragment
 
 import android.content.res.ColorStateList
 import android.view.View
@@ -8,10 +8,10 @@ import android.view.animation.AnimationUtils
 import androidx.core.widget.ImageViewCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.example.starcarftpoll.R
-import com.example.starcarftpoll.databinding.FragmentSplashBinding
-import com.example.starcarftpoll.view.navi.GoToAction
-import com.example.starcarftpoll.view.viewbase.BaseFragment
+import kr.loner.starcarftpoll.R
+import kr.loner.starcarftpoll.databinding.FragmentSplashBinding
+import kr.loner.starcarftpoll.view.navi.GoToAction
+import kr.loner.starcarftpoll.view.viewbase.BaseFragment
 import kotlinx.android.synthetic.main.fragment_splash.view.*
 
 
@@ -56,7 +56,7 @@ import kotlinx.android.synthetic.main.fragment_splash.view.*
                     )
                     imageButtonMoon.animate().rotation(360f).setDuration(600L)
                         .withEndAction {
-                            GoToAction.gotomain(root)
+                            GoToAction.goToMain(root)
                         }.start()
                 }.start()
         }

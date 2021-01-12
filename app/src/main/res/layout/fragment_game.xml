@@ -33,7 +33,7 @@
         app:civ_border_width="4dp"
         app:civ_shadow="true"
         app:civ_shadow_color="#8BC34A"
-      app:civ_shadow_radius="10"
+        app:civ_shadow_radius="10"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,17 +43,18 @@
         android:id="@+id/textView_paper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="@drawable/game_current_background"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFF"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView_GameBackground"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="문제 설명"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="문제 설명" />
 
     <RadioGroup
 

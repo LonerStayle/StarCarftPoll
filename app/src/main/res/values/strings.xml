@@ -4,122 +4,353 @@
     <string name="kakaolink_host">kakaolink</string>
     <string name="facebook_app_id">230526778306772</string>
     <string name="app_name">StarCarftPoll</string>
-<!--    게임 설명-->
+    <!--    게임 설명-->
     <string name="guide_info">"20년이 넘은 고인물 게임 \n스타크래프트 \n더 이상 뉴비는 존재하지 않는다.\n당신도 스꼴이라면 당신도 얼마나 이 게임에 고여있는가?\n 측정을 해보자 "</string>
 
-<!--    현재문제-->
+    <!--    현재문제-->
     <string-array name="currentQustion">
-        <item>1번 문제(난이도 쉬움)</item>
-        <item>2번 문제(난이도 쉬움)</item>
-        <item>3번 문제(난이도 쉬움)</item>
-        <item>4번 문제(난이도 보통)</item>
-        <item>5번 문제(난이도 보통)</item>
-        <item>6번 문제(난이도 보통)</item>
-        <item>7번 문제(난이도 쉬움)</item>
-        <item>8번 문제(난이도 쉬움)</item>
-        <item>9번 문제(난이도 쉬움)</item>
-        <item>10번 문제(난이도 쉬움)</item>
-        <item>11번 문제(난이도 쉬움)</item>
-        <item>12번 문제(난이도 쉬움)</item>
+        <item>1번 문제</item>
+        <item>2번 문제</item>
+        <item>3번 문제</item>
+        <item>4번 문제</item>
+        <item>5번 문제</item>
+
+        <item>6번 문제</item>
+        <item>7번 문제</item>
+        <item>8번 문제</item>
+        <item>9번 문제</item>
+        <item>10번 문제</item>
+
+        <item>11번 문제</item>
+        <item>12번 문제</item>
+        <item>13번 문제</item>
+        <item>14번 문제</item>
+        <item>15번 문제</item>
+
+        <item>16번 문제</item>
+        <item>17번 문제</item>
+        <item>18번 문제</item>
+        <item>19번 문제</item>
+        <item>20번 문제</item>
+
+        <item>21번 문제</item>
+        <item>22번 문제</item>
+        <item>23번 문제</item>
+        <item>24번 문제</item>
+        <item>25번 문제</item>
+
+        <item>26번 문제</item>
+        <item>27번 문제</item>
+        <item>28번 문제</item>
+        <item>29번 문제</item>
+        <item>30번 문제</item>
+
+        <item>31번 문제</item>
+        <item>32번 문제</item>
+        <item>33번 문제</item>
+        <item>34번 문제</item>
+        <item>35번 문제</item>
+
+        <item>36번 문제</item>
     </string-array>
 
 
     <string-array name="currentPaper">
-    <item> 전 프로게이머 민찬기는 질럿을 이 별명으로 부르며 프사기를 외치고 있다.\n 이 별명은 무엇인가? </item>
+
+        <!--        0-->
+        <item> 전 프로게이머 민찬기는 질럿을 이 별명으로 부르며 프사기를 외치고 있다.\n 이 별명은 무엇인가? </item>
         <item> 한창 과거(99년~ 2010년)에 수많은 명문 클랜과 초고수들과 프로게이머 지망생들이 많이 모여있었던 서버는?</item>
         <item>  다음 중 스타크래프트 공방에서 국민맵으로 불리지 않았던 맵은?</item>
         <item>  당신이 1:1 투혼 초보방을 만들었다. 초보를 학살 하러온 가짜 초보들이 대거 접속할 것이다.\n전적을 확인하여 속지않고 초보인지 확인을 해야한다.\n전적을 확인했을 때 가짜 초보일 확률이 가장 높은것은?</item>
-        <item> 이영호가 몸담았던 클랜으로 유명한 by클랜은 과거 많은 게이머 꿈나무들이 가입하고 싶었던 클랜으로 손꼽힌다.\n
-by클랜의 공식 채널명은 무엇인가?</item>
+        <item> 이영호가 몸담았던 클랜으로 유명한 by클랜은 과거 많은 게이머 꿈나무들이 가입하고 싶었던 클랜으로 손꼽힌다.\n by클랜의 공식 채널명은 무엇인가?</item>
+
+        <!--        5-->
         <item>   드론의 아버지 이주영은 현재 E스포츠 씬에서 그 모습을 확인 할 수가 없다고 한다.\n 다른 직업군을 가지고 생활하는 그의 현 직업은?</item>
-        <item>  과거 스타크래프트는 일반 배틀넷에서는 반응속도가 좋지않아서\n
-            런처라는 특별프로그램을 사용하기 전에는 게이머지망생들은 랜 연결 혹은 하마치를 통해 따로 연습했다고 한다.\n
-            답답한 유저들을 구제해준 이 런처라는 프로그램 중 가장 최초로 나온 런처는?</item>
-        <item>  다음 중 게임 내에서 레더 1등을 달성하여서 해설위원이 된
-해설위원은 누구인가?</item>
+        <item>  과거 스타크래프트는 일반 배틀넷에서는 반응속도가 좋지않아서\n 런처라는 특별프로그램을 사용하기 전에는 게이머지망생들은 랜 연결 혹은 하마치를 통해 따로 연습했다고 한다.\n답답한 유저들을 구제해준 이 런처라는 프로그램 중 가장 최초로 나온 런처는?</item>
+        <item>  다음 중 게임 내에서 레더 1등을 달성해서 해설위원이 된 사람은 누구인가?</item>
         <item>  다음 중 스타크래프트 맵중에서 가장 욕을 많이 먹었던 맵은?</item>
         <item>  최초의 저그 우승자는 누구인가?</item>
-        <item>  치킨을 배달 시키면 게임이 치킨 배달이 오기 전에 끝나는 종족전은?\n
-(5판 3선 기준)</item>
-        <item>  전프로게이머 출신중에 가장 피부가 흑인과 가까운 사람은?</item>
-    </string-array>
 
+        <!--        10-->
+        <item>  치킨을 배달 시키면 게임이 치킨 배달이 오기 전에 끝나는 종족전은?\n(5판 3선 기준)</item>
+        <item>  전프로게이머 출신중에 가장 피부가 흑인과 가까운 사람은?</item>
+        <item> 과거의 스타크래프트는 CD key가 없으면 정식 서버 배틀넷을 이용하지 못했다.\n하지만 사람들이 프리서버를 만듬으로써 정품을 구입하지 않은 사람도 많이 스타크래프트 배틀넷을 몰래 즐겼다고 한다.\n다음중 과거 스타크래프트 프리서버가 아닌것은?</item>
+        <item>과거 배틀넷의 느린 반응속도를 대처하기 사용했던 런처 프로그램에서\n런처 프로그램끼리 게임을 하기 위한 방제명 맨 뒤에 붙였던 형식은?</item>
+        <item>다음중 건담이라는 별명으로 불리는 이 유닛은 무엇인가?</item>
+
+
+        <!--        15-->
+        <item>스타크래프트는 수컷들의 향기가 물씬한 게임이다.\n특히 스타크래프트 채널에서군대얘기 만큼 민감한게 없다.\n이 드립 하나면 채널이 개드립으로 시끄러워진다.\n이 드립은 무엇인가?</item>
+        <item>질럿 1기당 필요한 저글링 양은?</item>
+        <item>박미선을 닮은 프로게이머는?</item>
+        <item>아래 답안중에\n현 아프리카 스타 전프로 BJ중에서 과거 현역시절\n가장 커리어가 좋았던 선수는?</item>
+        <item>스타크래프트 메이저 대회의 첫 출범시기순으로 나열했다.\n다음중 맞는것은?</item>
+
+        <!--        20-->
+        <item>구버전 스타크래프트는 1.16.1 패치를 마지막으로 리마스터가 되기전까지 별도의 패치가 이뤄지지 않았다.\n그래서 해커들은 종합핵을 만들기 충분한 시간이 있었고\n오빌리언이라는 종합핵이 생겨났다. 이 핵의 맵핵 사용키는?</item>
+        <item>김택용 님의 가장 소중한 절친은 누구인가?</item>
+        <item>다음중 제일 잘하는 사람은?</item>
+        <item>22년산 게임인 스타크래프트는 머나먼 과거에는 별도의 \n프로그램을 설치 않아도 게임내에서 의도적인 디스 거는법이 존재했다. \n다음중 단축키를 이용한 디스거는법은 무엇이었는가?</item>
+        <item>by클랜은 많은 스타 고인물들이 괜히 접속했다 나가는 채널이었다.\n 하지만 정식 클랜원 전용 채널 따로 있었다고 한다.\nby클랜의 클랜원 전용 서버는 ?</item>
+
+        <!--        25-->
+        <item>다음중 과거 수많은 프로게이머들을 배출한 WEST서버의 명문 클랜이 아닌곳이 적혀있는 답은?</item>
+        <item>GG는 GOOD GAME 혹은 GIVE UP GAME의 말을 줄여서 이야기 한것이고 GL 은 Good Luck을 줄여 말한 것이다.\n스타 초기에 외국인들과 게임을 즐기면서영어 줄임말이 성행했던것이다.\n 하지만 실은 gg,gl 말고도 스타초창기에 자주쓰던 줄임말이 하나 더 있었다.\n 그것은 무엇인가?</item>
+        <item>커리지 매치 제도는 프로게이머 준프로 자격증을 얻기 위한 토너먼트형식 매치였다.\n 커리지 매치가 생긴 이후로 커리지의 성적에 따라 유명 길드에 들어갈 수 있는 자격이 주어지기도 했다.\n 고인물이면서 일반 스타유저에게 커리지매치라는 곳은어떤곳 이었는가? ( 게이머지망생 기준 제외)</item>
+        <item>과거 (1998~2010) 스타크래프트 전용 마우스와 키보드로 불렸던 것은?</item>
+        <item>다음중 올인성 전략(쇼부)로 게임을 끝내지 못해도 어느정도 피해만 준다면 \n중후반운영이 유지가 가능한 것은?</item>
+
+        <!--        30-->
+        <item>각 종족별로 초반 정찰 성공시 우선적으로 체크 해야하는것은?</item>
+        <item>다음 상황에서 대처법이 틀린 것은?</item>
+        <item>각 종족별 엄청 째는 상황이 아닌 것은?</item>
+        <item>테란의 상황별 대처법이 틀린 것은?</item>
+        <item> 프로토스의 상황별 대처법이 틀린 것은?</item>
+
+        <!--        35-->
+        <item>다음 상황중 드는 생각이 틀린것은?</item>
+    </string-array>
 
 
     <string-array name="option1">
+
+        <!--        0-->
         <item>\t딴딴이\t\t</item>
         <item>\t유럽 서버\t\t</item>
         <item>\t로스트템플\t\t</item>
-        <item>\ 579승 1000패\t\t</item>
-        <item>\op byclan-\t\t</item>
-        <item>\택시 기사\t\t</item>
-        <item>\미니런처 (브레인)\t\t</item>
-        <item>\김태형\t\t</item>
-        <item>\ 루나\t\t</item>
-        <item>\국기봉\t\t</item>
+        <item>\t579승 1000패\t\t</item>
+        <item>\top byclan-\t\t</item>
+        <!--5-->
+        <item>\t택시 기사\t\t</item>
+        <item>\t미니런처 (브레인)\t\t</item>
+        <item>\t김태형\t\t</item>
+        <item>\t루나\t\t</item>
+        <item>\t국기봉\t\t</item>
+        <!--10-->
         <item>\tZ VS Z\t\t</item>
-        <item>\베르트랑\t\t</item>
+        <item>\t베르트랑\t\t</item>
+        <item>\t충남대서버 (gamepds)\t\t</item>
+        <item>\tL2\t\t</item>
+        <item>\SCV\t\t</item>
+        <!--15-->
+        <item>\t울 아빠 사단장 드립\t\t</item>
+        <item>\2저글링\t\t</item>
+        <item>\t김택용\t\t</item>
+        <item>\t김봉준\t\t</item>
+        <item>\t 스타리그 - MSL - ASL - 프로리그\n - KSL -곰 TV클래식 - WCG\n - MPL - 스베누 스타리그\t\t</item>
+        <!--20-->
+        <item>\tF7\t</item>
+        <item>\t이영호\t</item>
+        <item>\tAPM 400 , EAPM 130\t</item>
+        <item>\talt+F6\t</item>
+        <item>\top BC-\t</item>
+        <!--25-->
+        <item>\tShied, sea, dream.t\t</item>
+        <item>\t u r noob (너 허접)\t</item>
+        <item>\t현피 약속해서 싸우러 가는 장소\t</item>
+        <item>\t키보드:ST-36 , 마우스: 울트라 마우스\t</item>
+        <item>\t저그의 4드론\t</item>
+        <!--35-->
+        <item>\t저그 vs 테란 -> 저그: scv 갯수 확인,\n 팩토리 짓는 scv 방해\t</item>
+        <item>\t테란 vs 프로토스 -> \n테란: 원배럭 더블 후에 벙커를\n 공격하는 드라군 숫자에 맞춰서\n 일꾼이 수리 해야한다.\t</item>
+        <item>\t테란 vs 프로토스 -> 테란: 원팩 트리플\t</item>
+        <item>\t테란 vs 저그 -> \n테란이 기본 바이오닉 일때 저그가\n 2해처리면 2배럭 후 아카데미,\n저그가 3해처리라면 선엔배 5배럭\t</item>
+        <item>\t프로토스 vs 테란 ->\n옵저버를 뽑자마자\n 상대 본진을 확인할때\n 팩토리 숫자가 많다면,\n게이트를 늘려서 타이밍러쉬를 대비해야한다.\t</item>
+
+        <item>\t상대가 근본없는 이상한 날빌를 할 때 ->\n내가 이거 못막으면 스타 허접이다.\t</item>
     </string-array>
 
     <string-array name="option2">
+
+        <!--        0-->
         <item>\t딱딱이\t\t</item>
         <item>\tEAST 서버\t\t</item>
         <item>\t아카디아\t\t</item>
-        <item>\120승 150패\t\t</item>
-        <item>\op clanby\t\t</item>
-        <item>\사무직 회사원\t\t</item>
-        <item>\아쿠아런처\t\t</item>
-        <item>\엄재경\t\t</item>
-        <item>\노스텔지아\t\t</item>
-        <item>\박성준\t\t</item>
-        <item>\P VS Z\t\t</item>
-        <item>\기욤패트리\t\t</item>
+        <item>\t120승 150패\t\t</item>
+        <item>\top clanby\t\t</item>
+        <!--        5-->
+        <item>\t사무직 회사원\t\t</item>
+        <item>\t아쿠아런처\t\t</item>
+        <item>\t엄재경\t\t</item>
+        <item>\t노스텔지아\t\t</item>
+        <item>\t박성준\t\t</item>
+        <!--        10-->
+        <item>\tP VS Z\t\t</item>
+        <item>\t기욤패트리\t\t</item>
+        <item>\t게임아이\t\t</item>
+        <item>\t$L2\t\t</item>
+        <item>\t질럿\t\t</item>
+        <!--        15-->
+        <item>\t행보관 뒷담 드립\t\t</item>
+        <item>\t3저글링\t\t</item>
+        <item>\t이제동\t\t</item>
+        <item>\t샤이니\t\t</item>
+        <item>\tMSL - 스타리그 - 프로리그 - 스베누\n - ASL -WCG - MPL - 곰TV\t\t</item>
+        <!--        20-->
+        <item>\t쉬프트+F9\t</item>
+        <item>\t이제동\t</item>
+        <item>\tAPM 250, EAPM 100\t</item>
+        <item>\talt+F11\t</item>
+        <item>\t op by+\t</item>
+        <!--        25-->
+        <item>\tGM, S.G, Alive\t</item>
+        <item>\tu fr? (your from?)\t</item>
+        <item>\t클랜 형동생 및 게임 지인들 \n정모하러 가는 장소\t</item>
+        <item>\t 키보드: DT-35 , 마우스: 미니옵\t</item>
+        <item>\t프로토스의 전진 2게이트\t</item>
+        <!--        30-->
+        <item>\t프로토스 vs 테란 ->\n 프로토스: 가스 scv로 몇기가 캐는지,\n첫 팩토리 타이밍,\n원팩더블인지 원배럭 더블인지 확인\t</item>
+        <item>\t프로토스 vs 저그 ->\n프로토스: 상대가 뮤탈 뽑는것을\n 확인했을 때 본진 넥서스 근처에\n 캐논 1~2개 정도 만든다.\t</item>
+        <item>\t저그 vs 프로토스 ->\n저그: 9드론 후 3번째 멀티\t</item>
+        <item>\t테란 vs 저그 ->\n저그가 미친저그를 한다면\n바이오닉 업글에 신경쓰면서\n배럭을 많이 늘려서 마린메딕 숫자로 압도하기\t</item>
+        <item>\t프로토스 vs 테란 ->\n테란이 투팩이나 FD 라면\n드라군은 잃지 않게 조심하면서\n마린 점사 위주로 컨트롤한다.\t</item>
+        <!--        35-->
+        <item>\t상대가 무 견제 편안한 정석을 할 때 ->\n 이게임 참 박진감 흐른다.\t</item>
+
     </string-array>
 
+
     <string-array name="option3">
+        <!--0-->
         <item>\t미친놈\t\t</item>
         <item>\tWEST 서버\t</item>
         <item>\t파이썬\t</item>
-        <item>\2승 27패\t</item>
-        <item>\op byC-\t</item>
-        <item>\펀드매니저\t</item>
-        <item>\카오스런처\t</item>
-        <item>\전형준\t</item>
-        <item>\머큐리\t</item>
-        <item>\마XX\t</item>
+        <item>\t2승 27패\t</item>
+        <item>\top byC-\t</item>
+        <!--5-->
+        <item>\t펀드매니저\t</item>
+        <item>\t카오스런처\t</item>
+        <item>\t전형준\t</item>
+        <item>\t머큐리\t</item>
+        <item>\t마XX\t</item>
+        <!--10-->
         <item>\tP VS Z\t</item>
-        <item>\이성은\t</item>
+        <item>\t이성은\t</item>
+        <item>\tPG 투어\t</item>
+        <item>\t@L2\t</item>
+        <item>\t드라군\t</item>
+        <!--15-->
+        <item>\t준위 계급 존재여부 드립\t</item>
+        <item>\t4저글링\t</item>
+        <item>\t박성균\t</item>
+        <item>\t염보성\t</item>
+        <item>\t스타리그 - MSL - 곰TV 클래식 - 프로리그\n - ASL - KSL- WCG - MPL \t</item>
+        <!--20-->
+        <item>\tinsert 키 \t</item>
+        <item>\t송병구\t</item>
+        <item>\tAPM 300, EAPM 200\t</item>
+        <item>\tCtrl+F6\t</item>
+        <item>\top by-\t</item>
+        <!--25-->
+        <item>\tKT.MGW, Z-ZONE, S.SIR\t</item>
+        <item>\tF (Fuxx xxu)\t</item>
+        <item>\t타 클랜의 그놈 얼굴 \n궁금해서 보러가는 장소\t</item>
+        <item>\t 키보드: LED 삼성식 \n게이밍 키보드 , 마우스: G1\t</item>
+        <item>\t테란의 8배럭 (저그전)\t</item>
+        <!--30-->
+        <item>\t프로토스 vs 저그 -> \n프로토스: 스포닝폴 타이밍 확인,\n 3번째 멀티 확인,\n 저글링 및 드론 숫자 확인\t</item>
+        <item>\t저그 vs 테란 -> \n저그:상대가 원배럭더블에 \n기본 바이오닉 유닛일 때\n 미리 앞마당에 성큰을 3~5개 정도 만든다.\t</item>
+        <item>\t 프로토스 vs 테란 -> 쌩넥\t</item>
+        <item>\t테란 vs 프로토스 ->\n프로토스가 원겟 더블 후에\n 드라군이 생산이 늦는다면 \n 다크나 리버를 대비하기\t</item>
+        <item>\t프로토스 vs 저그 -> \n저그가 3해처리 올저글링 올인이라면\n플토는 캐논을 3~4개까지 늘려주고 \n질럿으로 저글링의 좁은 입구를 막는다.\t</item>
+        <!--35-->
+        <item>\t상대가 견제하면서 운영을 할 때 ->\n게임 x같이 하네\t</item>
     </string-array>
 
 
     <string-array name="option4">
+        <!--0-->
         <item>\t미니 울트라\t\t</item>
         <item>\tASIA 서버\t\t</item>
         <item>\t투혼\t\t</item>
-        <item>\0승 3패\t\t</item>
-        <item>\op by\t\t</item>
-        <item>\치과의사\t\t</item>
-        <item>\w런처(원순철)\t\t</item>
-        <item>\정소림\t\t</item>
-        <item>\데스티네이션\t\t</item>
-        <item>\홍진호\t\t</item>
+        <item>\t0승 3패\t\t</item>
+        <item>\top by\t\t</item>
+        <!--5-->
+        <item>\t치과의사\t\t</item>
+        <item>\tw런처(원순철)\t\t</item>
+        <item>\t정소림\t\t</item>
+        <item>\t데스티네이션\t\t</item>
+        <item>\t홍진호\t\t</item>
+        <!--10-->
         <item>\tT VS Z\t\t</item>
-        <item>\몽군\t\t</item>
+        <item>\t몽군\t\t</item>
+        <item>\t하마치\t\t</item>
+        <item>\t#L2\t\t</item>
+        <item>\t골리앗\t\t</item>
+        <!--15-->
+        <item>\t내 보직이 가장 힘들었다 드립\t\t</item>
+        <item>\t5저글링\t</item>
+        <item>\t이영호\t</item>
+        <item>\t김윤중\t</item>
+        <item>\t스타리그 - MSL - WCG - 프로리그 - 곰TV\n -ASL - KSL - MPL\t\t</item>
+        <!--20-->
+        <item>\t알트 + insert 키\t</item>
+        <item>\t김재훈(이게 정답임)\t</item>
+        <item>\tAPM 300, EAPM 120\t</item>
+        <item>\tCtrl+F11\t</item>
+        <item>\top clanby+\t</item>
+        <!--25-->
+        <item>\tname, GSP, 397, neox\t</item>
+        <item>\tHF (have fun)\t</item>
+        <item>1~3 모두 해당</item>
+        <item> 키보드: 큐센 DT-35, \n마우스: 울트라 게이밍 마우스</item>
+        <item>프로토스의 상대 본진 몰래 포토캐논 러쉬</item>
+
+        <!--30-->
+        <item>테란 vs 프로토스 -> \n테란: SCV로 드라군 사업, 파일런 갯수\n, 앞마당 준비하는지 낌새, 드라군 갯수</item>
+        <item>테란 vs 테란 -> \n중후반에 상대가 몰래 레이스를 한다면\n 골리앗 비중을 높혀야 한다.</item>
+        <item>프로토스 vs 프로토스 -> \n2게이트 후 노 로보틱스 앞마당 넥서스</item>
+        <item>테란 vs 프로토스 -> \n초반에 프로토스가 생넥서스를 가져가면서 \n2겟에서 빠르게 먼저 질럿3기를 뽑을 때,\n뒤늦게라도 똑같이 앞마당 커맨드 짓기</item>
+        <item>프로토스 vs 저그 -> \n저그가 뮤탈체제 위주로 게임을 진행할때 \n아칸을 섞어주는 것이 좋다.</item>
+
+        <item> 상대가 쌩더블을 할때 -> 어쭈 이것봐라?</item>
     </string-array>
 
 
     <integer-array name="answer">
+        <!--        0-->
         <item>4</item>
         <item>3</item>
         <item>2</item>
         <item>4</item>
         <item>2</item>
+        <!--5-->
         <item>4</item>
         <item>3</item>
         <item>1</item>
         <item>3</item>
         <item>2</item>
+        <!--10-->
         <item>1</item>
         <item>3</item>
+        <item>4</item>
+        <item>4</item>
+        <item>1</item>
+        <!--15-->
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+        <item>3</item>
+        <item>4</item>
+        <!--20-->
+        <item>2</item>
+        <item>4</item>
+        <item>3</item>
+        <item>1</item>
+        <item>3</item>
+        <!--25-->
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>2</item>
+        <item>3</item>
+        <!--30-->
+        <item>1</item>
+        <item>3</item>
+        <item>2</item>
+        <item>4</item>
+        <item>2</item>
+        <!--35-->
+        <item>2</item>
     </integer-array>
 </resources>

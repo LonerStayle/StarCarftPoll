@@ -5,7 +5,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.starcarftpoll.view.fragment.MainFragment"
+        android:name="kr.loner.starcarftpoll.view.fragment.MainFragment"
         android:label="MainFragment" >
         <action
             android:id="@+id/action_mainFragment_to_gameFragment"
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/gameFragment"
-        android:name="com.example.starcarftpoll.view.fragment.GameFragment"
+        android:name="kr.loner.starcarftpoll.view.fragment.GameFragment"
         android:label="GameFragment" >
         <action
             android:id="@+id/action_gameFragment_to_resultFragment"
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/guideFragment"
-        android:name="com.example.starcarftpoll.view.fragment.GuideFragment"
+        android:name="kr.loner.starcarftpoll.view.fragment.GuideFragment"
         android:label="GuideFragment" >
         <action
             android:id="@+id/action_guideFragment_to_gameFragment"
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.example.starcarftpoll.view.fragment.ResultFragment"
+        android:name="kr.loner.starcarftpoll.view.fragment.ResultFragment"
         android:label="ResultFragment" >
         <argument
             android:name="result"
@@ -44,7 +44,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.starcarftpoll.view.fragment.SplashFragment"
+        android:name="kr.loner.starcarftpoll.view.fragment.SplashFragment"
         android:label="SplashFragment" >
         <action
             android:id="@+id/action_splashFragment_to_mainFragment"
