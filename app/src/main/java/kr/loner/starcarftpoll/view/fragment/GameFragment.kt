@@ -16,6 +16,7 @@ import kr.loner.starcarftpoll.view.navi.GoToAction
 import kr.loner.starcarftpoll.view.viewbase.BaseFragment
 import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.fragment_game.*
 import kotlinx.coroutines.launch
 
@@ -202,9 +203,12 @@ class GameFragment : BaseFragment<FragmentGameBinding>(R.layout.fragment_game) {
      }
 
     private fun setAdView(){
-        AdRequest.Builder().build().let {
+        MobileAds.initialize(requireContext(),getString(R.string.admob_app_id))
+        AdRequest.Builder().build().also{
             adView.loadAd(it)
         }
+
+
     }
 }
 
