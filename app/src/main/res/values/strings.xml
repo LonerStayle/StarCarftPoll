@@ -3,7 +3,7 @@
     <string name="kakao_scheme">kakao58b6b19eefd144b1f81a031fd2b8aa0e</string>
     <string name="kakaolink_host">kakaolink</string>
     <string name="facebook_app_id">230526778306772</string>
-    <string name="app_name">StarCarftPoll</string>
+    <string name="app_name">스타크래프트\n고인물측정</string>
     <!--    게임 설명-->
     <string name="guide_info">"20년이 넘은 고인물 게임 \n스타크래프트 \n더 이상 뉴비는 존재하지 않는다.\n당신도 스꼴이라면 당신도 얼마나 이 게임에 고여있는가?\n 측정을 해보자 "</string>
 
