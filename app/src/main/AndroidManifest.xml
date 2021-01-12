@@ -18,7 +18,12 @@
             </intent-filter>
         </activity>
 
-<!--        카톡-->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id"/>
+
+
+        <!--        카톡-->
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/kakao_app_key" />

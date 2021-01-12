@@ -62,6 +62,10 @@ dependencies {
     implementation group: 'com.kakao.sdk', name: 'kakaonavi', version: '1.28.0'
     //페이스북
     implementation 'com.facebook.android:facebook-share:5.15.3'
-//스트링 유틸스
+
+   //스트링 유틸스
     implementation 'org.apache.commons:commons-lang3:3.0'
+
+    //구글 광고 서비스
+    implementation 'com.google.android.gms:play-services-ads:18.0.0'
 }

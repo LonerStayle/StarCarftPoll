@@ -15,6 +15,8 @@ import kr.loner.starcarftpoll.view.GameQuestionView
 import kr.loner.starcarftpoll.view.navi.GoToAction
 import kr.loner.starcarftpoll.view.viewbase.BaseFragment
 import androidx.lifecycle.lifecycleScope
+import com.google.android.gms.ads.AdRequest
+import kotlinx.android.synthetic.main.fragment_game.*
 import kotlinx.coroutines.launch
 
 
@@ -47,6 +49,8 @@ class GameFragment : BaseFragment<FragmentGameBinding>(R.layout.fragment_game) {
         gameAnimation()
         setQuestionData()
         radiSelectEvent()
+        setAdView()
+
     }
 
      private fun FragmentGameBinding.setQuestionData() {
@@ -197,6 +201,11 @@ class GameFragment : BaseFragment<FragmentGameBinding>(R.layout.fragment_game) {
 
      }
 
+    private fun setAdView(){
+        AdRequest.Builder().build().let {
+            adView.loadAd(it)
+        }
+    }
 }
 
 

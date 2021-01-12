@@ -1,4 +1,4 @@
-package kr.example.starcarftpoll
+package kr.loner.starcarftpoll
 
 import org.junit.Test
 
