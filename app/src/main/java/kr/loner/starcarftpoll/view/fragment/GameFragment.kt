@@ -45,11 +45,10 @@ class GameFragment : BaseFragment<FragmentGameBinding>(R.layout.fragment_game) {
  private val dp by lazy { resources.displayMetrics.density }
 
     override fun FragmentGameBinding.setOnCreateView() {
-
         // 애니메이션 시작
         gameAnimation()
         setQuestionData()
-        radiSelectEvent()
+        answerSelectEvent()
         setAdView()
 
     }
@@ -80,7 +79,7 @@ class GameFragment : BaseFragment<FragmentGameBinding>(R.layout.fragment_game) {
          GameQuestionView.setQuestion(question, this)
      }
 
-     private fun FragmentGameBinding.radiSelectEvent() {
+     private fun FragmentGameBinding.answerSelectEvent() {
          radio.setOnCheckedChangeListener { group, checkedId ->
 
              if (currentQuestion < questionNumber) {
